@@ -55,7 +55,7 @@ const BookCover = ({
         <img
           src={coverImage}
           alt='Book Cover'
-          className='rounded-sm object-fill'
+          className='rounded-sm object-fill fill'
         />
       </div>
     </div>
