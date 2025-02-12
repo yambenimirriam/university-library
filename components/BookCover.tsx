@@ -1,3 +1,5 @@
+import { cn } from '@/lib/utils';
+
 type BookCoverVariant =
   | 'extraSmall'
   | 'medium'
@@ -24,15 +26,40 @@ interface Props {
   variant?: BookCoverVariant;
   coverColor: string;
   coverUrl: string;
+  coverImage?: string;
 }
 
 const BookCover = ({
   className,
-  variant,
-  coverColor,
-  coverUrl,
+  variant = 'regular',
+  coverColor = '#012848',
+  coverImage = 'https://placehold.co/400*600.png',
 }: Props) => {
-  return <div>BookCover</div>;
+  return (
+    <div
+      className={cn(
+        'relative transition-all duration-300',
+        variantStyles[variant],
+        className
+      )}
+    >
+      BOOK SIDE SGV
+      <div
+        className='absolute z-10'
+        style={{
+          left: '12%',
+          width: '87.5%',
+          height: '88%',
+        }}
+      >
+        <img
+          src={coverImage}
+          alt='Book Cover'
+          className='rounded-sm object-fill'
+        />
+      </div>
+    </div>
+  );
 };
 
 export default BookCover;
