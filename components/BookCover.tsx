@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import BookCoverSvg from './BookCoverSvg';
 
 type BookCoverVariant =
   | 'extraSmall'
@@ -25,7 +26,6 @@ interface Props {
   className?: string;
   variant?: BookCoverVariant;
   coverColor: string;
-  coverUrl: string;
   coverImage?: string;
 }
 
@@ -43,7 +43,7 @@ const BookCover = ({
         className
       )}
     >
-      BOOK SIDE SGV
+      <BookCoverSvg coverColor={coverColor} />
       <div
         className='absolute z-10'
         style={{
