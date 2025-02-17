@@ -109,7 +109,7 @@ export const sampleBooks = [
       '/sample-video.mp4?updatedAt=1722593504152',
     summary:
       'An essential guide to understanding the core mechanisms of JavaScript, focusing on scope and closures.',
-    // isLoanedBook: true,
+    isLoanedBook: true,
   },
   {
     id: 4,
