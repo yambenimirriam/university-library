@@ -48,10 +48,10 @@ const BookCard = ({
               className='object-contain'
             />
             <p className='text-light-100'>
-              10 days left to rerurn
+              10 days left to return
             </p>
           </div>
-          <Button className='book-btn'>
+          <Button className='book-btn text-light-500'>
             Download receipt
           </Button>
         </div>
